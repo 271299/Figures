@@ -127,5 +127,17 @@ public:
 };
 int main()
 {
+	const int size = 4;
+	figure* v[size] = { new circle , new triangle , new square , new pentagon };
+	for (int i = 0; i < size; i++)
+	{
+		v[i]->set();
+	}
+	for (int i = 0; i < size; i++)
+	{
+		v[i]->print();
+	}
+
+
 	return 0;
 }
