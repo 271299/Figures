@@ -23,6 +23,13 @@ public:
 		cin >> y;
 	}
 };
+class figure : public point {
+protected:
+	point* points;
+public:
+	virtual void set() = 0;
+	virtual void print() = 0;
+};
 int main()
 {
 	return 0;
