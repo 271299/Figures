@@ -30,6 +30,101 @@ public:
 	virtual void set() = 0;
 	virtual void print() = 0;
 };
+class circle : public figure {
+	int size = 2;
+public:
+	void set() override
+	{
+		points = new point[size];
+		cout << "Enter center and any point that is on the circle : ";
+		for (int i = 0; i < size; i++)
+		{
+
+			points[i].set();
+
+		}
+	}
+	void print()override
+	{
+		cout << "Circle : \n";
+		for (int i = 0; i < size; i++)
+		{
+			points[i].print();
+		}
+		cout << string(10, '-') << "\n";
+	}
+};
+class square : public figure {
+	int size = 4;
+public:
+	void set() override
+	{
+		points = new point[size];
+		cout << "Enter 4  points : ";
+		for (int i = 0; i < size; i++)
+		{
+
+			points[i].set();
+
+		}
+	}
+	void print()override
+	{
+		cout << "Square : \n";
+		for (int i = 0; i < size; i++)
+		{
+			points[i].print();
+		}
+		cout << string(10, '-') << "\n";
+	}
+};
+class triangle : public figure {
+	int size = 3;
+public:
+	void set() override
+	{
+		points = new point[size];
+		cout << "Enter 3  points : ";
+		for (int i = 0; i < size; i++)
+		{
+
+			points[i].set();
+
+		}
+	}
+	void print()override
+	{
+		cout << "Triangle : \n";
+		for (int i = 0; i < size; i++)
+		{
+			points[i].print();
+		}
+		cout << string(10, '-') << "\n";
+	}
+};
+class pentagon : public figure {
+	int size = 5;
+public:
+	void set() override
+	{
+		points = new point[size];
+		cout << "Enter 5  points : ";
+		for (int i = 0; i < size; i++)
+		{
+			points[i].set();
+
+		}
+	}
+	void print()override
+	{
+		cout << "Pentagon : \n";
+		for (int i = 0; i < size; i++)
+		{
+			points[i].print();
+		}
+		cout << string(10, '-') << "\n";
+	}
+};
 int main()
 {
 	return 0;
